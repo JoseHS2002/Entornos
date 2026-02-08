@@ -40,4 +40,18 @@ public class CCuenta {
         return iCodErr;
     }
 
+    public void retirar(double cantidad)
+    {
+        if (cantidad <= 0)
+        {
+            System.out.println("No se puede retirar una cantidad negativa");
+        }
+        else if (dSaldo < cantidad) {
+            System.out.println("No hay suficiente saldo");
+        }
+        else
+        {
+
+        }
+    }
 }
