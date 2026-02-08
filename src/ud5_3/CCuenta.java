@@ -1,6 +1,7 @@
 package ud5_3;
 
 public class CCuenta {
+    private static double dSaldo=0;
     public static void main(String[] args) {
         // Depuracion. Se detiene siempre
         CCuenta miCuenta = new CCuenta();
@@ -9,13 +10,14 @@ public class CCuenta {
         miCuenta.ingresar(-100);
         System.out.println("Saldo Inicial: "+miCuenta.dSaldo+" euros");
         miCuenta.ingresar(100);
-        System.out.println("Saldo Inicial: "+miCuenta.dSaldo+" euros");
+        System.out.println("Saldo tras ingreso: "+miCuenta.dSaldo+" euros");
         miCuenta.ingresar(200);
-        System.out.println("Saldo Inicial: "+miCuenta.dSaldo+" euros");
+        System.out.println("Saldo tras ingreso: "+miCuenta.dSaldo+" euros");
         // Depuracion. Provoca parada con condicion de tercer ingreso
         miCuenta.ingresar(300);
-        System.out.println("Saldo Inicial: "+miCuenta.dSaldo+" euros");
-
+        System.out.println("Saldo tras ingreso: "+miCuenta.dSaldo+" euros");
+        miCuenta.retirar(50);
+        System.out.println("Saldo tras retirada: "+miCuenta.dSaldo+" euros");
     }
 
     public int ingresar(double cantidad){
