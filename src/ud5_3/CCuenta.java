@@ -17,4 +17,27 @@ public class CCuenta {
         System.out.println("Saldo Inicial: "+miCuenta.dSaldo+" euros");
 
     }
+
+    public int ingresar(double cantidad){
+        int iCodErr;
+        if (cantidad<0)
+        {
+            System.out.println("No se puede ingresar una cantidad negativa");
+            iCodErr=1;
+        }
+        else if (cantidad == -3)
+        {
+            System.out.println("Error detectable en pruebas de caja blanca");
+            iCodErr = 2;
+        }
+        else
+        {
+            //Depuracion. Punto de parada. Solo en el 3 ingreso
+            dSaldo = dSaldo + cantidad;
+            iCodErr = 0;
+        }
+        // Depuracion. Punto de parada cuando la cantidad es menor de 0
+        return iCodErr;
+    }
+
 }
