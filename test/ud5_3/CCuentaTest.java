@@ -7,6 +7,7 @@ class CCuentaTest {
 
     @Test
     void main() {
+        System.out.println("Hola");
     }
 
     @Test
